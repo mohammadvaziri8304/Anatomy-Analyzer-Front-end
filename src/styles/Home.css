@@ -1,0 +1,81 @@
+.home-wrapper {
+  padding: 40px 20px;
+  font-family: "IRANSans", sans-serif;
+  background: linear-gradient(to bottom, #4b974b, #ffffff);
+  min-height: 100vh;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.home-header h1 {
+  font-size: 36px;
+  color: #30114d;
+  margin-bottom: 20px;
+}
+
+.home-header p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #6b1b1b;
+}
+
+.options-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.option-card {
+  width: 300px;
+  background-color: rgb(147, 203, 142);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+}
+
+.option-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.option-card h3 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  color: #1a2e20;
+}
+
+.option-card p {
+  font-size: 15px;
+  padding: 0 15px;
+  color: #2f3230;
+  margin-bottom: 15px;
+}
+
+.option-card button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #125236;
+  color: rgb(181, 231, 214);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option-card button:hover {
+  background-color: #053517;
+}
