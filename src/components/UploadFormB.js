@@ -39,9 +39,11 @@ function UploadFormB({ image_url }) {
     <div className="upload-form">
       <input type="file" accept="image/*" onChange={handleFileChange} />
 
-      <button type="button" onClick={handleUploadImage} disabled={loading}>
-        {loading ? "در حال پردازش..." : "آپلود تصویر"}
-      </button>
+      {!result && (
+        <button type="button" onClick={handleUploadImage} disabled={loading}>
+            {loading ? "در حال پردازش..." : "آپلود تصویر"}
+        </button>
+      )}
 
       {(previewUrl && !result) && (
         <div className="image-preview">

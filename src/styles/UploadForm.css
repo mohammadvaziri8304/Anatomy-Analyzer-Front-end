@@ -52,11 +52,12 @@
 
 
 .image-preview {
+  position: relative;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
@@ -77,5 +78,5 @@
   height: 10px;
   background: red;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%),
 }

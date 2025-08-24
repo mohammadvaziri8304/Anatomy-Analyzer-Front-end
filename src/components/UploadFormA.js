@@ -8,6 +8,7 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
   const [points, setPoints] = useState([]);
   const [result, setResult] = useState("");
   const [imageId, setImageId] = useState(null);
+  const [loading, setLoading] = useState(false);
   const imageRef = useRef();
 
   const handleFileChange = (e) => {
@@ -44,7 +45,7 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
       alert("لطفاً ابتدا یک عکس انتخاب کنید.");
       return;
     }
-
+    setLoading(true);
     try {
       const data = await uploadImageA(file, image_url);
       if (data.image_id) {
@@ -53,6 +54,8 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
       }
     } catch {
       alert("❌ خطا در آپلود تصویر. جزئیات در کنسول.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -65,12 +68,14 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
       alert("تعداد نقاط انتخاب شده نادرست است.");
       return;
     }
-
+    setLoading(true);
     try {
       const data = await sendPoints(imageId, points, points_url);
       setResult(JSON.stringify(data, null, 2));
     } catch {
       alert("❌ خطا در ارسال نقاط. جزئیات در کنسول.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -78,9 +83,11 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
     <div className="upload-form">
       <input type="file" accept="image/*" onChange={handleFileChange} />
 
-      <button type="button" onClick={handleUploadImage}>
-        آپلود تصویر
-      </button>
+      {!imageId && (
+        <button type="button" onClick={handleUploadImage}>
+          {loading ? "در حال پردازش..." : "آپلود تصویر"}
+        </button>
+      )}
 
       {previewUrl && (
         <div className="image-preview" onClick={handleImageClick}>
@@ -90,8 +97,8 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
                 key={index}
                 className="point-marker"
                 style={{
-                  left: `${p.x}px`,
-                  top: `${p.y}px`,
+                  top: p.y + "px",
+                  left: p.x + "px"
                 }}
                 title={`نقطه ${index + 1}`}
               />
@@ -103,9 +110,11 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
       {imageId && (
         <div>
           <p>تعداد نقاط انتخاب‌شده: {points.length} / {num_of_points}</p>
-          <button type="button" onClick={handleSendPoints}>
-            ارسال نقاط
-          </button>
+          {!result && (
+            <button type="button" onClick={handleSendPoints}>
+              {loading ? "در حال پردازش..." : "ارسال نقاط"}
+            </button>
+          )}
         </div>
       )}
 
