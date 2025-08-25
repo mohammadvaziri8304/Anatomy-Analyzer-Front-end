@@ -40,6 +40,16 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
     setPoints([...points, { x: Math.round(x), y: Math.round(y) }]);
   };
 
+  const handleDeletePoint = () => {
+    if (!imageId) {
+      alert("برای حذف نقاط ابتدا باید تصویر آپلود شود");
+      return;
+    }
+    if (points.length == 0) return;
+
+    setPoints(points.slice(0, -1));
+  }
+
   const handleUploadImage = async () => {
     if (!file) {
       alert("لطفاً ابتدا یک عکس انتخاب کنید.");
@@ -110,6 +120,11 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
       {imageId && (
         <div>
           <p>تعداد نقاط انتخاب‌شده: {points.length} / {num_of_points}</p>
+          {points.length > 0 && (
+            <button type="button" onClick={handleDeletePoint}>
+              حذف آخرین نقطه
+            </button>
+          )}
           {!result && (
             <button type="button" onClick={handleSendPoints}>
               {loading ? "در حال پردازش..." : "ارسال نقاط"}
