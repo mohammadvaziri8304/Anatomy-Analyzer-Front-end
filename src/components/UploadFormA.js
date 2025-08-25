@@ -120,15 +120,17 @@ function UploadFormA({ image_url, points_url, num_of_points }) {
       {imageId && (
         <div>
           <p>تعداد نقاط انتخاب‌شده: {points.length} / {num_of_points}</p>
-          {points.length > 0 && (
-            <button type="button" onClick={handleDeletePoint}>
-              حذف آخرین نقطه
-            </button>
-          )}
           {!result && (
-            <button type="button" onClick={handleSendPoints}>
-              {loading ? "در حال پردازش..." : "ارسال نقاط"}
-            </button>
+            <div>
+              {points.length > 0 && (
+                <button type="button" onClick={handleDeletePoint}>
+                  حذف آخرین نقطه
+                </button>
+              )}
+              <button type="button" onClick={handleSendPoints}>
+                {loading ? "در حال پردازش..." : "ارسال نقاط"}
+              </button>
+            </div>
           )}
         </div>
       )}
