@@ -9,11 +9,11 @@ function PageA() {
   return (
     <div>
       <div>
-        <h2>آپلود عکس برای پردازش A1</h2>
+        <h2>اندازه گیری زاویه سر و گردن، کیفوز و لوردوز</h2>
         <UploadFormA image_url={image_url1} points_url={points_url1} num_of_points={10} />
       </div>
       <div>
-        <h2>آپلود عکس برای پردازش A2</h2>
+        <h2>تشخیص اسکولیوز</h2>
         <UploadFormA image_url={image_url2} points_url={points_url2} num_of_points={8} />
       </div>
     </div>

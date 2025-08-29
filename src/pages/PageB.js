@@ -7,11 +7,11 @@ function PageB() {
   return (
     <div>
       <div>
-        <h2>آپلود عکس برای پردازش B1</h2>
+        <h2>اندازه گیری زاویه سر و گردن، کیفوز و لوردوز</h2>
         <UploadFormB image_url={image_url1} />
       </div>
       <div>
-        <h2>آپلود عکس برای پردازش B2</h2>
+        <h2>تشخیص اسکولیوز</h2>
         <UploadFormB image_url={image_url2} />
       </div>
     </div>
