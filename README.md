@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 🧬 Anatomy Analyzer (Front-end)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://anatomy-analyzer-front-end.vercel.app/)  
+[![GitHub Repo](https://img.shields.io/badge/Repository-GitHub-blue?logo=github)](https://github.com/mohammadvaziri8304/Anatomy-Analyzer-Front-end)
 
-## Available Scripts
+## 📌 Overview
+**Anatomy Analyzer** is a web application that allows users to analyze anatomical images in two different ways:
+1. **Automatic Analysis (AI-powered):** Upload an image and let the backend AI model detect and process anatomical points automatically.  
+2. **Manual Analysis (User-defined):** Upload an image and manually select specific points on the image. These coordinates are then sent to the backend for custom processing. 
 
-In the project directory, you can run:
+This project is the **frontend** part of the system, built with **React** and connected to a FastAPI backend.
 
-### `npm start`
+🔗 **Live Demo:** [Anatomy Analyzer on Vercel](https://anatomy-analyzer-front-end.vercel.app/)  
+🔗 **Repository:** [GitHub Project](https://github.com/mohammadvaziri8304/Anatomy-Analyzer-Front-end)
+🔗 **Backend Repository (FastAPI):** [Anatomy Backend](https://github.com/ParsaExact/Anatomy)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
+- 📤 Upload anatomical images.
+- ✨ **AI-based automatic point detection** and analysis.
+- 🎯 **Manual point selection** on uploaded images.
+- 📊 Sends selected points to backend API for analysis.
+- 🖼️ Interactive image preview with point markers.
+- 🎨 Modern and responsive UI with custom styles.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
+- **Frontend:** React (CRA), Axios, React Router  
+- **Styling:** Custom CSS with modern UI design  
+- **Backend (connected):** FastAPI (deployed separately)  
+- **Deployment:** Vercel  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
+src/
+├── components/ # React components (Upload forms, etc.)
+├── pages/ # App pages
+├── services/ # Axios API services
+├── styles/ # Custom CSS styles
+├── App.js # Main app entry
+└── index.js # React entry point
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚡ Installation & Development
+Clone the repository and install dependencies:
 
-### `npm run eject`
+```bash
+git clone https://github.com/mohammadvaziri8304/Anatomy-Analyzer-Front-end.git
+cd Anatomy-Analyzer-Front-end
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run the development server:
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Build for production:
+npm run build
