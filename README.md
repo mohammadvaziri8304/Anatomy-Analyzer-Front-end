@@ -11,7 +11,7 @@
 This project is the **frontend** part of the system, built with **React** and connected to a FastAPI backend.
 
 🔗 **Live Demo:** [Anatomy Analyzer on Vercel](https://anatomy-analyzer-front-end.vercel.app/)  
-🔗 **Repository:** [GitHub Project](https://github.com/mohammadvaziri8304/Anatomy-Analyzer-Front-end)
+🔗 **Repository:** [GitHub Project](https://github.com/mohammadvaziri8304/Anatomy-Analyzer-Front-end)  
 🔗 **Backend Repository (FastAPI):** [Anatomy Backend](https://github.com/ParsaExact/Anatomy)
 
 ---
@@ -35,13 +35,13 @@ This project is the **frontend** part of the system, built with **React** and co
 ---
 
 ## 📂 Project Structure
-src/
-├── components/ # React components (Upload forms, etc.)
-├── pages/ # App pages
-├── services/ # Axios API services
-├── styles/ # Custom CSS styles
-├── App.js # Main app entry
-└── index.js # React entry point
+src/  
+├── components/ # React components (Upload forms, etc.)  
+├── pages/ # App pages  
+├── services/ # Axios API services  
+├── styles/ # Custom CSS styles  
+├── App.js # Main app entry  
+└── index.js # React entry point  
 
 ---
 
@@ -52,9 +52,16 @@ Clone the repository and install dependencies:
 git clone https://github.com/mohammadvaziri8304/Anatomy-Analyzer-Front-end.git
 cd Anatomy-Analyzer-Front-end
 npm install
+```
 
 Run the development server:
+
+```bash
 npm start
+```
 
 Build for production:
+
+```bash
 npm run build
+```
